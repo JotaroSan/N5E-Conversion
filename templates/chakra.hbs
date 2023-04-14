@@ -1,0 +1,40 @@
+<li class="attribute health">
+    <h4 class="attribute-name box-title">{{localize "DND5E.ChakraPoints"}}</h4>
+    <a class="config-button" data-action="hit-points" data-tooltip="DND5E.ChakraPointsConfig">
+        <i class="fas fa-cog"></i>
+    </a>
+    <div class="attribute-value multiple">
+        <input name="system.attributes.cp.value" type="text" value="{{cp.value}}" placeholder="10"
+               data-tooltip="DND5E.ChakraPointsCurrent" data-dtype="Number">
+        <span class="sep"> / </span>
+        <span data-tooltip="{{#if cp.max}}DND5E.ChakraPointsOverride{{else}}DND5E.ChakraPointsMax{{/if}}">
+            {{cp.max}}
+        </span>
+    </div>
+    <footer class="attribute-footer">
+        <input name="system.attributes.cp.temp" type="text" class="tempcp"
+               placeholder="+{{ localize 'DND5E.Temp' }}" value="{{cp.temp}}"
+               data-tooltip="DND5E.ChakraPointsTemp" data-dtype="Number">
+        <input name="system.attributes.cp.tempmax" type="text" class="tempcp"
+               placeholder="+{{ localize 'DND5E.Max' }}" value="{{cp.tempmax}}"
+               data-tooltip="DND5E.ChakraPointsTempMax" data-dtype="Number">
+    </footer>
+</li>
+
+<li class="attribute chakra-dice">
+    <h4 class="attribute-name box-title">{{ localize "DND5E.ChakraDice" }}</h4>
+    <a class="config-button" data-action="chakra-dice" data-tooltip="DND5E.ChakraDiceConfig">
+        <i class="fas fa-cog"></i>
+    </a>
+    <div class="attribute-value multiple">
+        <label class="chakra-dice">
+            <span data-tooltip="DND5E.ChakraDiceRemaining">{{system.attributes.cd}}</span>
+            <span class="sep"> / </span>
+            <span data-tooltip="DND5E.ChakraDiceMax">{{system.details.level}}</span>
+        </label>
+    </div>
+    <footer class="attribute-footer">
+        <a class="rest short-rest" data-tooltip="DND5E.ShortRest">{{localize "DND5E.RestS"}}</a>
+        <a class="rest long-rest" data-tooltip="DND5E.LongRest">{{localize "DND5E.RestL"}}</a>
+    </footer>
+</li>
