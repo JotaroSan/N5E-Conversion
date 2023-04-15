@@ -32,3 +32,7 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 
 ## STRONGLY RECCOMENDED
 - Folder Compendium Mod
+
+## To Do 
+- Bulk Conversion Formula
+- Add Conditions and Icons
