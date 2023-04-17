@@ -25,6 +25,7 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 20. The evocation school of magic is now "Ninjutsu."
 21. The illusion school of magic is now "Genjutsu."
 22. The necromancy school of magic is now "Bukijutsu."
+23. Replace "lbs" and "weight" with "bulk"
 
 ## Required 
 - Foundry V10
@@ -36,3 +37,13 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 ## To Do 
 - Bulk Conversion Formula
 - Add Conditions and Icons
+- Remove Spell Slots from Spell Page
+- Remove Core DnD5E Compendiums
+- Ninjutsu Save DC = INT save or CON save ( Class depending )
+- Genjutsu Save DC = WIS save or CHA save ( Class depending )
+- Taijutsu Save DC = STR save or DEX save ( Class depending )
+- Resource - Chakra  ( CP )
+- Resource - Chakra Dice ( CD )
+- Counter - Downtime ( With Total and current )
+- Add Missing Weapon Keywords
+- Clean-Up Documentation
