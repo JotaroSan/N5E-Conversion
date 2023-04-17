@@ -86,18 +86,6 @@ Hooks.on("init", function() {
 
 });
 
-// Add in Custom Proficiency Formula
-Hooks.on("ready", () => {
-  if (CONFIG.DND5E.calculations.calculateMod) {
-    const originalCalculateMod = CONFIG.DND5E.calculations.calculateMod;
-    CONFIG.DND5E.calculations.calculateMod = (level) => {
-      return Math.floor((level + 2) / 3);
-    };
-  }
-});
-
-
-
 // Remove Skills that are no longer needed
 Hooks.on("setup", function () {
   // Remove Nature, Religion and Arcana skills
