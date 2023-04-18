@@ -57,7 +57,6 @@ Hooks.on("init", () => {
 
 });
 
-
 // Add Missing Skills
 Hooks.on("init", function() {
   // Register new skills
@@ -85,6 +84,7 @@ Hooks.on("init", function() {
   CONFIG.DND5E.abilityActivationTypes["fta"] = "Full Turn Action";
 
 });
+
 
 // Remove Skills that are no longer needed
 Hooks.on("setup", function () {

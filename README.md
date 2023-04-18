@@ -2,7 +2,8 @@
 N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based N5E version
 
 ## What This Module Actually Does
-1. Add new damage types (Chakra, Wind, Earth) and resistance types (Chakra, Wind, Earth).
+1. Include Compendiums for Clans, Features, Jutsu, Items and Class Abilities.
+2. Add new damage types (Chakra, Wind, Earth) and resistance types (Chakra, Wind, Earth).
 2. Add new spell components (Hand Seals, Chakra Molding, Chakra Seals, Mobility, Ninja Tools, Weapons, Fuinjutsu, Medical, and Clash).
 3. Add a new sense (Chakra Sight).
 4. Add new skills (Ninshou, Martial Arts, Illusion, and Chakra Control).
@@ -47,3 +48,4 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 - Counter - Downtime ( With Total and current )
 - Add Missing Weapon Keywords
 - Clean-Up Documentation
+- Start work on NPC Compendium
