@@ -222,6 +222,10 @@ Hooks.on("setup", function () {
   CONFIG.DND5E.languages = Object.fromEntries(
     Object.entries(CONFIG.DND5E.languages).filter(([key, value]) => key === 'common')
   );
+  // Remove Unnecessary Currencies
+    CONFIG.DND5E.currencies = Object.fromEntries(
+      Object.entries(CONFIG.DND5E.currencies).filter(([key, value]) => !['pp', 'ep', 'cp','sp'].includes(key))
+    );
 
 
 });
