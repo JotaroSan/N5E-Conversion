@@ -1,6 +1,7 @@
-
-// Add Missing Damage Types
-Hooks.on("init", () => {
+// Core N5E Modification File - Init & Ready
+// Init - Add missing Types
+// Ready - Remove DND5E Items not longer needed
+Hooks.on("init", function() {
 
   // Define the new damage and resistance types
   CONFIG.DND5E.damageTypes["chakra"] = "Chakra";
@@ -121,16 +122,11 @@ Hooks.on("init", () => {
   CONFIG.DND5E.weaponProperties['ua'] = "Unarmed";
   CONFIG.DND5E.weaponProperties['ver'] = "Versatile";
 
-
   CONFIG.DND5E.cp = {
     label: "Chakra Points",
     abbreviation: "CP",
   };
 
-});
-
-// Add Missing Skills
-Hooks.on("init", function() {
   // Register new skills
   CONFIG.DND5E.skills["nin"] = {label: "Ninshou",ability: "int"};
   CONFIG.DND5E.skills["cft"] = {label: "Crafting",ability: "int"};
@@ -152,7 +148,6 @@ Hooks.on("init", function() {
   CONFIG.DND5E.languages["Ins"] = "Insect";
 
 });
-
 
 // Remove Things that are no longer needed
 Hooks.on("setup", function () {
@@ -177,9 +172,7 @@ Hooks.on("setup", function () {
     Object.entries(CONFIG.DND5E.languages).filter(([key, value]) => key === 'common')
   );
   // Remove Unnecessary Currencies
-    CONFIG.DND5E.currencies = Object.fromEntries(
+  CONFIG.DND5E.currencies = Object.fromEntries(
     Object.entries(CONFIG.DND5E.currencies).filter(([key, value]) => !['pp', 'ep', 'cp','sp'].includes(key))
   );
-
-
 });
