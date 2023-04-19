@@ -115,15 +115,38 @@ Hooks.on("init", () => {
   // Add Missing ArmorClasses
   CONFIG.DND5E.armorClasses = {};
   CONFIG.DND5E.armorClasses["default"] = {label:"Skin", formula: "10 + floor(@prof/2) + @abilities.dex.mod"};
-  CONFIG.DND5E.armorClasses["shark"] = {label:"SharkSkin", formula: "10 + floor(@prof/2) + @abilities.con.mod"};
-  CONFIG.DND5E.armorClasses["psycha"] = {label:"PsyCha", formula: "10 + floor(@prof/2) + @abilities.cha.mod"};
-  CONFIG.DND5E.armorClasses["psywis"] = {label:"PsyWis", formula: "10 + floor(@prof/2) + @abilities.wis.mod"};
+  CONFIG.DND5E.armorClasses["shark"] = {label:"Shark Skin", formula: "10 + floor(@prof/2) + @abilities.con.mod"};
+  CONFIG.DND5E.armorClasses["psycha"] = {label:"Psy Cha", formula: "10 + floor(@prof/2) + @abilities.cha.mod"};
+  CONFIG.DND5E.armorClasses["psywis"] = {label:"Psy Wis", formula: "10 + floor(@prof/2) + @abilities.wis.mod"};
   CONFIG.DND5E.armorClasses["evasive"] = {label:"Evasive", formula: "10 + @prof + @abilities.dex.mod"};
   CONFIG.DND5E.armorClasses["geo"] = {label:"Geo", formula: "13 + floor(@prof/2) + @abilities.con.mod"};
   CONFIG.DND5E.armorClasses["sharingan"] = {label:"Sharingan", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.int.mod"};
   CONFIG.DND5E.armorClasses["bone"] = {label:"Bone", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.con.mod"};
   CONFIG.DND5E.armorClasses["unarmored"] = {label:"Unarmored", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.wis.mod"};
   CONFIG.DND5E.armorClasses["custom"] = {label:"Custom"};
+
+  // Add Missing Weapon Properties
+  CONFIG.DND5E.weaponProperties[''] = "";
+  CONFIG.DND5E.weaponProperties['amm'] = "ammunition";
+  CONFIG.DND5E.weaponProperties['blk'] = "blocking";
+  CONFIG.DND5E.weaponProperties['crit'] = "critical";
+  CONFIG.DND5E.weaponProperties['dly'] = "deadly";
+  CONFIG.DND5E.weaponProperties['dis'] = "disarm";
+  CONFIG.DND5E.weaponProperties['fin'] = "finesse";
+  CONFIG.DND5E.weaponProperties['grp'] = "grapple";
+  CONFIG.DND5E.weaponProperties['hvy'] = "heavy";
+  CONFIG.DND5E.weaponProperties['hid'] = "hidden";
+  CONFIG.DND5E.weaponProperties['lgt'] = "light";
+  CONFIG.DND5E.weaponProperties['ldg'] = "loading";
+  CONFIG.DND5E.weaponProperties['ma'] = "multiattack";
+  CONFIG.DND5E.weaponProperties['rng'] = "range";
+  CONFIG.DND5E.weaponProperties['rch'] = "reach";
+  CONFIG.DND5E.weaponProperties['ret'] = "returning";
+  CONFIG.DND5E.weaponProperties['thn'] = "thrown";
+  CONFIG.DND5E.weaponProperties['tri'] = "trip";
+  CONFIG.DND5E.weaponProperties['th'] = "two-handed";
+  CONFIG.DND5E.weaponProperties['ua'] = "unarmed";
+  CONFIG.DND5E.weaponProperties['ver'] = "versatile";
 
 
   CONFIG.DND5E.cp = {
