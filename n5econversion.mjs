@@ -11,42 +11,15 @@ Hooks.on("init", () => {
   CONFIG.DND5E.damageResistanceTypes["earth"] = "Earth";
 
   // Add missing Spell Components
-  CONFIG.DND5E.spellComponents["handseals"] = {
-    label: "Hand Seals",
-    abbr: "HS"
-  };
-  CONFIG.DND5E.spellComponents["molding"] = {
-    label: "Chakra Molding",
-    abbr: "CM"
-  };
-  CONFIG.DND5E.spellComponents["chakraseals"] = {
-    label: "Chakra Seals",
-    abbr: "CS"
-  };
-  CONFIG.DND5E.spellComponents["mobility"] = {
-    label: "Mobility",
-    abbr: "M"
-  };
-  CONFIG.DND5E.spellComponents["ninjatools"] = {
-    label: "Ninja Tools",
-    abbr: "NT"
-  };
-  CONFIG.DND5E.spellComponents["weapons"] = {
-    label: "Weapons",
-    abbr: "W"
-  };
-  CONFIG.DND5E.spellComponents["fuinjutsu"] = {
-    label: "Fuinjutsu",
-    abbr: "F"
-  };
-  CONFIG.DND5E.spellComponents["medical"] = {
-    label: "Medical",
-    abbr: "Med"
-  };
-  CONFIG.DND5E.spellComponents["clash"] = {
-    label: "Clash",
-    abbr: "CL"
-  };
+  CONFIG.DND5E.spellComponents["handseals"] = {label: "Hand Seals",abbr: "HS"};
+  CONFIG.DND5E.spellComponents["molding"] = {label: "Chakra Molding",abbr: "CM"};
+  CONFIG.DND5E.spellComponents["chakraseals"] = {label: "Chakra Seals",abbr: "CS"};
+  CONFIG.DND5E.spellComponents["mobility"] = {label: "Mobility",abbr: "M"};
+  CONFIG.DND5E.spellComponents["ninjatools"] = {label: "Ninja Tools",abbr: "NT"};
+  CONFIG.DND5E.spellComponents["weapons"] = {label: "Weapons",abbr: "W"};
+  CONFIG.DND5E.spellComponents["fuinjutsu"] = {label: "Fuinjutsu",abbr: "F"};
+  CONFIG.DND5E.spellComponents["medical"] = {label: "Medical",abbr: "Med"};
+  CONFIG.DND5E.spellComponents["clash"] = {label: "Clash",abbr: "CL"};
 
   // Add missing sense, chakra sight
   CONFIG.DND5E.senses["chakra sight"] = "Chakra sight";
@@ -126,7 +99,7 @@ Hooks.on("init", () => {
   CONFIG.DND5E.armorClasses["custom"] = {label:"Custom"};
 
   // Add Missing Weapon Properties
-  CONFIG.DND5E.weaponProperties[] = "";
+  CONFIG.DND5E.weaponProperties = {};
   CONFIG.DND5E.weaponProperties['amm'] = "Ammunition";
   CONFIG.DND5E.weaponProperties['blk'] = "Blocking";
   CONFIG.DND5E.weaponProperties['crit'] = "Critical";
@@ -159,30 +132,11 @@ Hooks.on("init", () => {
 // Add Missing Skills
 Hooks.on("init", function() {
   // Register new skills
-  CONFIG.DND5E.skills["nin"] = {
-    label: "Ninshou",
-    ability: "int"
-  };
-
-    CONFIG.DND5E.skills["cft"] = {
-      label: "Crafting",
-      ability: "int"
-    };
-
-  CONFIG.DND5E.skills["mar"] = {
-    label: "Martial Arts",
-    ability: "str"
-  };
-
-  CONFIG.DND5E.skills["ill"] = {
-    label: "Illusion",
-    ability: "wis"
-  };
-
-  CONFIG.DND5E.skills["ccon"] = {
-    label: "Chakra Control",
-    ability: "con"
-  };
+  CONFIG.DND5E.skills["nin"] = {label: "Ninshou",ability: "int"};
+  CONFIG.DND5E.skills["cft"] = {label: "Crafting",ability: "int"};
+  CONFIG.DND5E.skills["mar"] = {label: "Martial Arts",ability: "str"};
+  CONFIG.DND5E.skills["ill"] = {label: "Illusion",ability: "wis"};
+  CONFIG.DND5E.skills["ccon"] = {label: "Chakra Control",ability: "con"};
 
   // Add Missing Ability Activation Types
   CONFIG.DND5E.abilityActivationTypes["fta"] = "Full Turn Action";
@@ -224,8 +178,8 @@ Hooks.on("setup", function () {
   );
   // Remove Unnecessary Currencies
     CONFIG.DND5E.currencies = Object.fromEntries(
-      Object.entries(CONFIG.DND5E.currencies).filter(([key, value]) => !['pp', 'ep', 'cp','sp'].includes(key))
-    );
+    Object.entries(CONFIG.DND5E.currencies).filter(([key, value]) => !['pp', 'ep', 'cp','sp'].includes(key))
+  );
 
 
 });
