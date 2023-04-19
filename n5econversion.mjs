@@ -25,8 +25,10 @@ Hooks.on("init", function() {
   // Add missing sense, chakra sight
   CONFIG.DND5E.senses["chakra sight"] = "Chakra sight";
 
-  // Add new weapon proficiencies
+  // Weapon Proficiency
+  // Remove All Existing DND5E Items
   CONFIG.DND5E.weaponIds = {};
+  // Add missing weaponIds
   CONFIG.DND5E.weaponIds["battlewire"] = "N5EConversion.n5e-items.81zHkZgJJUswAl8C";
   CONFIG.DND5E.weaponIds["blowgun"] = "N5EConversion.n5e-items.ZdkI4f6cAvCaSDc1";
   CONFIG.DND5E.weaponIds["handaxe"] = "N5EConversion.n5e-items.GUsi2ly8gxYK0TH2";
@@ -68,8 +70,10 @@ Hooks.on("init", function() {
   CONFIG.DND5E.weaponIds["fumashuriken"] = "N5EConversion.n5e-items.TXvRdUiQQuxwTgyF";
   CONFIG.DND5E.weaponIds["monstershuriken"] = "N5EConversion.n5e-items.sxBvPLkkop5jkScv";
 
-  // Add missing Armor Proficincies
+  // Armor Proficiency
+  // Remove All Existing DND5E Items
   CONFIG.DND5E.armorIds = {};
+  // Add missing Armor Proficincies
   CONFIG.DND5E.armorIds["padded"] = "N5EConversion.n5e-items.PXA5xkWhB5D1y2ZL";
   CONFIG.DND5E.armorIds["leather"] = "N5EConversion.n5e-items.wr07gpjgWZQw2NgC";
   CONFIG.DND5E.armorIds["studded"] = "N5EConversion.n5e-items.zHootXIbZBSCHawn";

@@ -30,6 +30,10 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 22. The necromancy school of magic is now "Bukijutsu."
 23. Replace "lbs" and "weight" with "bulk"
 24. Add Missing Languages and remove unnecessary ones
+25. Added missing Weapon Keywords
+26. Added Missing Weapon Proficiencies
+27. Added Missing Armor Proficiencies
+28. 
 
 ## Required 
 - Foundry V10
