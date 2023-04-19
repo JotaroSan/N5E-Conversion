@@ -1,6 +1,7 @@
 
 // Add Missing Damage Types
 Hooks.on("init", () => {
+
   // Define the new damage and resistance types
   CONFIG.DND5E.damageTypes["chakra"] = "Chakra";
   CONFIG.DND5E.damageResistanceTypes["chakra"] = "Chakra";
@@ -49,6 +50,48 @@ Hooks.on("init", () => {
   // Add missing sense, chakra sight
   CONFIG.DND5E.senses["chakra sight"] = "Chakra sight";
 
+  // Add new weapon proficiencies
+  CONFIG.DND5E.weaponIds["battlewire"] = "N5EConversion.n5e-items.81zHkZgJJUswAl8C";
+  CONFIG.DND5E.weaponIds["blowgun"] = "N5EConversion.n5e-items.ZdkI4f6cAvCaSDc1";
+  CONFIG.DND5E.weaponIds["battleaxe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["handaxe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["chainedhandscythe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["handscythe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["kunai"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["quarterstaff"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["spear"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["tanto"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["weightedchain"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["senbon"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["shortbow"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["shuriken"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["sling"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["broadsword"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["chainedspear"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["combatbracers"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["greataxe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["hookedlance"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["ironclaw"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["jitte"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["katana"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["naginata"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["nunchaku"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["odachi"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["sasumata"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["scythe"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["tetsubo"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["tonfa"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["warclub"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["whip"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["knuckleblade"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["chakram"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["monsterchakram"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["longbow"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["crossbowhand"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["crossbowheavy"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["net"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["fumashuriken"] = "N5EConversion.n5e-items.";
+  CONFIG.DND5E.weaponIds["monstershuriken"] = "N5EConversion.n5e-items.";
 
   CONFIG.DND5E.cp = {
     label: "Chakra Points",
@@ -64,6 +107,11 @@ Hooks.on("init", function() {
     label: "Ninshou",
     ability: "int"
   };
+
+    CONFIG.DND5E.skills["cft"] = {
+      label: "Crafting",
+      ability: "int"
+    };
 
   CONFIG.DND5E.skills["mar"] = {
     label: "Martial Arts",
@@ -83,6 +131,16 @@ Hooks.on("init", function() {
   // Add Missing Ability Activation Types
   CONFIG.DND5E.abilityActivationTypes["fta"] = "Full Turn Action";
 
+  // Add Missing Languages
+  CONFIG.DND5E.languages["low"] = "Land of Water Dialect";
+  CONFIG.DND5E.languages["lof"] = "Land of Fire Dialect";
+  CONFIG.DND5E.languages["loe"] = "Land of Earth Dialect";
+  CONFIG.DND5E.languages["loc"] = "Land of Cloud Dialect";
+  CONFIG.DND5E.languages["los"] = "Land of Sand Dialect";
+  CONFIG.DND5E.languages["snk"] = "Snake";
+  CONFIG.DND5E.languages["dog"] = "Dog";
+  CONFIG.DND5E.languages["Ins"] = "Insect";
+
 });
 
 
@@ -90,7 +148,7 @@ Hooks.on("init", function() {
 Hooks.on("setup", function () {
   // Remove Nature, Religion and Arcana skills
   CONFIG.DND5E.skills = Object.fromEntries(
-    Object.entries(CONFIG.DND5E.skills).filter(([key, value]) => !['arc', 'nat', 'rel'].includes(key))
+    Object.entries(CONFIG.DND5E.skills).filter(([key, value]) => !['arc', 'rel'].includes(key))
   );
   // Remove Verbal and Ritual spell components
   CONFIG.DND5E.spellComponents = Object.fromEntries(
@@ -104,5 +162,10 @@ Hooks.on("setup", function () {
   CONFIG.DND5E.spellSchools = Object.fromEntries(
     Object.entries(CONFIG.DND5E.spellSchools).filter(([key, value]) => !['div', 'trs', 'enc'].includes(key))
   );
+  // Remove Unnecessary Languages from list
+  CONFIG.DND5E.languages = Object.fromEntries(
+    Object.entries(CONFIG.DND5E.languages).filter(([key, value]) => key === 'common')
+  );
+
 
 });

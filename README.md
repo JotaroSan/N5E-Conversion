@@ -10,9 +10,10 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 4. Add new skills (Ninshou, Martial Arts, Illusion, and Chakra Control).
 5. Add a new ability activation type (Full Turn Action).
 6. Change the proficiency formula calculation.
-7. Remove Nature, Religion, and Arcana skills.
+7. Remove Nature, and Arcana skills.
 8. Remove Verbal and Ritual spell components.
 9. Remove spell level options 6, 7, 8, and 9.
+10. Spell levels 1,2,3,4,5 & Cantrip re-assigned to E,D,C,B,S,A accordingly.
 10. Remove Spell Schools Divination, Transmutation, and Enchantment. 
 11. The personality trait is now "Ambition."
 12. The inspiration is now "Will of Fire."
@@ -28,6 +29,7 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 21. The illusion school of magic is now "Genjutsu."
 22. The necromancy school of magic is now "Bukijutsu."
 23. Replace "lbs" and "weight" with "bulk"
+24. Add Missing Languages and remove unnecessary ones
 
 ## Required 
 - Foundry V10
@@ -50,3 +52,5 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 - Add Missing Weapon Keywords
 - Clean-Up Documentation
 - Start work on NPC Compendium
+- Update Weapon/Armor/Tool Proficiency
+- Update Armor Formulas
