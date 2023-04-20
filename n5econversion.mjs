@@ -92,7 +92,7 @@ Hooks.on("init", function() {
 
   // Add Missing ArmorClasses
   CONFIG.DND5E.armorClasses = {};
-  CONFIG.DND5E.armorClasses["default"] = {label:"Skin", formula: "10 + floor(@prof/2) + @abilities.dex.mod"};
+  CONFIG.DND5E.armorClasses["default"] = {label:"Skin", formula: "10 + @prof + @abilities.dex.mod"};
   CONFIG.DND5E.armorClasses["shark"] = {label:"Shark Skin", formula: "10 + floor(@prof/2) + @abilities.con.mod"};
   CONFIG.DND5E.armorClasses["psycha"] = {label:"Psy Cha", formula: "10 + floor(@prof/2) + @abilities.cha.mod"};
   CONFIG.DND5E.armorClasses["psywis"] = {label:"Psy Wis", formula: "10 + floor(@prof/2) + @abilities.wis.mod"};
