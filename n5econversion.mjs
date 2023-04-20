@@ -153,6 +153,33 @@ Hooks.on("init", function() {
 
 });
 
+// Proficiency Wrapper
+// Modifies Level being ingest to produce correct proficiency mod for N5E system
+Hooks.once('ready', async function() {
+  libWrapper.register('N5EConversion', 'dnd5e.documents.Proficiency.calculateMod', function (wrapped, lvl) {
+    const level = lvl;
+	var newMod = 3;
+	if (level >= 1 && level < 4) {
+		newMod =  5;
+	  } else if (level >= 4 && level <= 6) {
+		newMod =  9;
+	  } else if (level >= 7 && level <= 9) {
+		newMod =  13;
+	  } else if (level >= 10 && level <= 12) {
+		newMod =  17;
+	  } else if (level >= 13 && level <= 15) {
+		newMod =  21;
+	  } else if (level >= 16 && level <= 18) {
+		newMod =  25;
+	  } else if (level >= 19 && level <= 20) {
+		newMod =  29;
+	  }
+
+    return wrapped(newMod);
+  }, 'WRAPPER');
+});
+
+
 // Remove Things that are no longer needed
 Hooks.on("setup", function () {
   // Remove Nature, Religion and Arcana skills
