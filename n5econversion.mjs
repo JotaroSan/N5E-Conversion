@@ -92,7 +92,7 @@ Hooks.on("init", function() {
 
   // Add Missing ArmorClasses
   CONFIG.DND5E.armorClasses = {};
-  CONFIG.DND5E.armorClasses["default"] = {label:"Skin", formula: "10 + @prof + @abilities.dex.mod"};
+  CONFIG.DND5E.armorClasses["default"] = {label:"Skin", formula: "10 + floor(@prof/2) + @abilities.dex.mod"};
   CONFIG.DND5E.armorClasses["shark"] = {label:"Shark Skin", formula: "10 + floor(@prof/2) + @abilities.con.mod"};
   CONFIG.DND5E.armorClasses["psycha"] = {label:"Psy Cha", formula: "10 + floor(@prof/2) + @abilities.cha.mod"};
   CONFIG.DND5E.armorClasses["psywis"] = {label:"Psy Wis", formula: "10 + floor(@prof/2) + @abilities.wis.mod"};
@@ -100,7 +100,7 @@ Hooks.on("init", function() {
   CONFIG.DND5E.armorClasses["geo"] = {label:"Geo", formula: "13 + floor(@prof/2) + @abilities.con.mod"};
   CONFIG.DND5E.armorClasses["sharingan"] = {label:"Sharingan", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.int.mod"};
   CONFIG.DND5E.armorClasses["bone"] = {label:"Bone", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.con.mod"};
-  CONFIG.DND5E.armorClasses["unarmored"] = {label:"Unarmored", formula: "10 + floor(@prof/2) + @abilities.dex.mod + @abilities.wis.mod"};
+  CONFIG.DND5E.armorClasses["unarmored"] = {label:"Martial Defense", formula: "10 + @prof + @abilities.dex.mod + @abilities.wis.mod"};
   CONFIG.DND5E.armorClasses["custom"] = {label:"Custom"};
 
   // Add Missing Weapon Properties
