@@ -34,6 +34,7 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 26. Added Missing Weapon Proficiencies
 27. Added Missing Armor Proficiencies
 28. Added Missing Armor Formulas
+29. Added in hook to fix proficiency modifier
 
 ## Required 
 - Foundry V10
