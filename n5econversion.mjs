@@ -126,6 +126,13 @@ Hooks.on("init", function() {
   CONFIG.DND5E.weaponProperties['ua'] = "Unarmed";
   CONFIG.DND5E.weaponProperties['ver'] = "Versatile";
 
+  // Add New Spell Schools
+  CONFIG.DND5E.spellSchools['nin'] = {label: "Ninjutsu"};
+  CONFIG.DND5E.spellSchools['tai'] = {label: "Taijutsu"};
+  CONFIG.DND5E.spellSchools['buki'] = {label: "Bukijutsu"};
+  CONFIG.DND5E.spellSchools['gen'] = {label: "Genjutsu"};
+  CONFIG.DND5E.spellSchools['hij'] = {label: "Hijutsu"};
+
   CONFIG.DND5E.cp = {
     label: "Chakra Points",
     abbreviation: "CP",
@@ -194,9 +201,9 @@ Hooks.on("setup", function () {
   CONFIG.DND5E.spellLevels = Object.fromEntries(
     Object.entries(CONFIG.DND5E.spellLevels).filter(([key, value]) => !['6', '7', '8', '9'].includes(key))
   );
-  // Remove Spell Schools Divinitation, Transmutaiton and Enchantment
+  // Remove Spell Schools
   CONFIG.DND5E.spellSchools = Object.fromEntries(
-    Object.entries(CONFIG.DND5E.spellSchools).filter(([key, value]) => !['div', 'trs', 'enc'].includes(key))
+    Object.entries(CONFIG.DND5E.spellSchools).filter(([key, value]) => !['div', 'trs', 'enc','abj','evo','ill','nec','con'].includes(key))
   );
   // Remove Unnecessary Languages from list
   CONFIG.DND5E.languages = Object.fromEntries(
