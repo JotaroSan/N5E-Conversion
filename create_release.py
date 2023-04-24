@@ -16,14 +16,14 @@ parser.add_argument('release_tag', help="The version to specify in the manifest,
 args = parser.parse_args()
 
 # Open the existing manifest file and determine the eventual zip name with it
-manifest = json.load(open(f'{args.package_type}.json','r'))
-zip_filename = f"{manifest['id']}-{args.release_tag}.zip"
+#manifest = json.load(open(f'{args.package_type}.json','r'))
+#zip_filename = f"{manifest['id']}-{args.release_tag}.zip"
 
 # Write the version and download link to the manifest
-manifest['version'] = str(args.release_tag)
+#manifest['version'] = str(args.release_tag)
 #manifest['manifest'] = f"https://gitlab.com/{gitlab_group}/{manifest['id']}/-/releases/permalink/latest/downloads/{args.package_type}.json"
-manifest['download'] = f"https://gitlab.com/{gitlab_group}/{manifest['id']}/-/releases/{args.release_tag}/downloads/{zip_filename}"
-json.dump(manifest, open(f'{args.package_type}.json', 'w'), indent=2)
+#manifest['download'] = f"https://gitlab.com/{gitlab_group}/{manifest['id']}/-/releases/{args.release_tag}/downloads/{zip_filename}"
+#json.dump(manifest, open(f'{args.package_type}.json', 'w'), indent=2)
 
 
 # Add of the specified files to the final zip that's being output
