@@ -26,7 +26,7 @@ manifest['download'] = f"https://gitlab.com/{gitlab_group}/{manifest['id']}/-/re
 json.dump(manifest, open(f'{args.package_type}.json', 'w'), indent=2)
 
 
-# Add all of the specified files to the final zip that's being output
+# Add of the specified files to the final zip that's being output
 with zipfile.ZipFile(zip_filename, 'w') as zip_file:
     for filename in include_files:
         zip_file.write(filename)
