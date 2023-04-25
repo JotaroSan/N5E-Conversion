@@ -74,11 +74,6 @@
   "DND5E.Ideals": "Drive",
   "DND5E.CurrencyAbbrGP": "ryo",
   "DND5E.CurrencyGP": "Ryo",
-  "DND5E.SchoolAbj": "Hijutsu",
-  "DND5E.SchoolCon": "Taijutsu",
-  "DND5E.SchoolEvo": "Ninjutsu",
-  "DND5E.SchoolIll": "Genjutsu",
-  "DND5E.SchoolNec": "Bukijutsu",
-  "DND5e.Weight": "Bulk",
+  "DND5E.Weight": "Bulk",
   "DND5E.AbbreviationLbs":"Bulk"
 }

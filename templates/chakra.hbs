@@ -1,6 +1,7 @@
-<li class="attribute health">
+<!-- Chakra Points Attribute -->
+<li class="attribute chakra">
     <h4 class="attribute-name box-title">{{localize "DND5E.ChakraPoints"}}</h4>
-    <a class="config-button" data-action="hit-points" data-tooltip="DND5E.ChakraPointsConfig">
+    <a class="config-button" data-action="chakra-points" data-tooltip="DND5E.ChakraPointsConfig">
         <i class="fas fa-cog"></i>
     </a>
     <div class="attribute-value multiple">
@@ -21,20 +22,26 @@
     </footer>
 </li>
 
-<li class="attribute chakra-dice">
-    <h4 class="attribute-name box-title">{{ localize "DND5E.ChakraDice" }}</h4>
-    <a class="config-button" data-action="chakra-dice" data-tooltip="DND5E.ChakraDiceConfig">
+<!-- Chakra Dice Attribute -->
+<li class="attribute chakra-die">
+    <h4 class="attribute-name box-title">{{localize "DND5E.ChakraDie"}}</h4>
+    <a class="config-button" data-action="chakra-die" data-tooltip="DND5E.ChakraDieConfig">
         <i class="fas fa-cog"></i>
     </a>
     <div class="attribute-value multiple">
-        <label class="chakra-dice">
-            <span data-tooltip="DND5E.ChakraDiceRemaining">{{system.attributes.cd}}</span>
-            <span class="sep"> / </span>
-            <span data-tooltip="DND5E.ChakraDiceMax">{{system.details.level}}</span>
-        </label>
+        <input name="system.attributes.cd.value" type="text" value="{{cd.value}}" placeholder="d6"
+               data-tooltip="DND5E.ChakraDieCurrent" data-dtype="String">
+        <span class="sep"> / </span>
+        <span data-tooltip="{{#if cd.max}}DND5E.ChakraDieOverride{{else}}DND5E.ChakraDieMax{{/if}}">
+            {{cd.max}}
+        </span>
     </div>
     <footer class="attribute-footer">
-        <a class="rest short-rest" data-tooltip="DND5E.ShortRest">{{localize "DND5E.RestS"}}</a>
-        <a class="rest long-rest" data-tooltip="DND5E.LongRest">{{localize "DND5E.RestL"}}</a>
+        <input name="system.attributes.cd.temp" type="text" class="tempcd"
+               placeholder="+{{ localize 'DND5E.Temp' }}" value="{{cd.temp}}"
+               data-tooltip="DND5E.ChakraDieTemp" data-dtype="String">
+        <input name="system.attributes.cd.tempmax" type="text" class="tempcd"
+               placeholder="+{{ localize 'DND5E.Max' }}" value="{{cd.tempmax}}"
+               data-tooltip="DND5E.ChakraDieTempMax" data-dtype="String">
     </footer>
 </li>
