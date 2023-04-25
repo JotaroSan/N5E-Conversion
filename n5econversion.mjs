@@ -103,6 +103,9 @@ Hooks.on("init", function() {
     CONFIG.DND5E.armorClasses["unarmored"] = {label:"Martial Defense", formula: "10 + @prof + @abilities.dex.mod + @abilities.wis.mod"};
     CONFIG.DND5E.armorClasses["custom"] = {label:"Custom"};
 
+	// Add Status Effects
+	CONFIG.statusEffects.push({ id: "burned1", label: "Burned [1]", icon: "modules/N5E-Conversion/icons/conditions/Burned-1.png" })
+
     // Add Missing Weapon Properties
     CONFIG.DND5E.weaponProperties = {};
     CONFIG.DND5E.weaponProperties['amm'] = "Ammunition";
