@@ -40,8 +40,6 @@ for json_obj in json_objects:
         spell_school = "Hijutsu"
     elif "Bukijutsu" in keywords:
         spell_school = "Bukijutsu"
-    elif "Water" in title:
-        spell_school = "Ninjutsu"
     else:
         for keyword in keywords:
             if keyword in ["Ninjutsu", "Taijutsu", "Genjutsu"]:

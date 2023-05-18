@@ -55,3 +55,5 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 - Resource - Chakra Dice ( CD )
 - Counter - Downtime ( With Total and current )
 - Start work on NPC Compendium
+- Add 2 ranks of WOF
+- Add Damage Reduction to Actors
