@@ -106,6 +106,10 @@ Hooks.on("init", function() {
 	// Add Status Effects
 	// Elemental
 	CONFIG.statusEffects.push({ id: "burned1", label: "Burned [1]", icon: "modules/N5E-Conversion/icons/conditions/Burned-1.png" })
+	CONFIG.statusEffects.push({ id: "burned2", label: "Burned [2]", icon: "modules/N5E-Conversion/icons/conditions/Burned-2.png" })
+	CONFIG.statusEffects.push({ id: "burned3", label: "Burned [3]", icon: "modules/N5E-Conversion/icons/conditions/Burned-3.png" })
+	CONFIG.statusEffects.push({ id: "burned4", label: "Burned [4]", icon: "modules/N5E-Conversion/icons/conditions/Burned-4.png" })
+	CONFIG.statusEffects.push({ id: "burned5", label: "Burned [5]", icon: "modules/N5E-Conversion/icons/conditions/Burned-5.png" })
     // Mental
     // Sensory
     // Physical
