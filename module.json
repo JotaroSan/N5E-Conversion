@@ -101,7 +101,7 @@
       "name": "JotaroUchiha"
     }
   ], 
-  "download": "https://gitlab.com/JotaroSan/-/releases/v0.9.1/downloads/N5E-Conversion-v0.9.1.zip", 
-  "manifest": "https://gitlab.com/JotaroSan/-/releases/permalink/latest/downloads/N5E-Conversion.json", 
+  "download": "https://gitlab.com/JotaroSan/N5E-Conversion/releases/v0.9.1/downloads/N5E-Conversion-v0.9.1.zip",
+  "manifest": "https://gitlab.com/JotaroSan/N5E-Conversion/releases/permalink/latest/downloads/N5E-Conversion.json",
   "id": "N5E-Conversion"
 }
