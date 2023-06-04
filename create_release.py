@@ -22,9 +22,9 @@ zip_filename = "module.zip"
 
 # Write the version and download link to the manifest
 manifest['version'] = str(args.release_tag)
-manifest['manifest'] = "https://gitlab.com/{}/N5E-Conversion/releases/{}/download/module.json".format(gitlab_group,
+manifest['manifest'] = "https://gitlab.com/{}/N5E-Conversion/releases/download/{}/module.json".format(gitlab_group,
                                                                                                       args.release_tag )
-manifest['download'] = "https://gitlab.com/{}/N5E-Conversion/releases/{}/download/{}".format(gitlab_group,
+manifest['download'] = "https://gitlab.com/{}/N5E-Conversion/releases/download/{}/{}".format(gitlab_group,
                                                                                              args.release_tag,
                                                                                              zip_filename)
 
