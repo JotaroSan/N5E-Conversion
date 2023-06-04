@@ -17,14 +17,16 @@ parser.add_argument('release_tag',
 args = parser.parse_args()
 
 # Open the existing manifest file and determine the eventual zip name with it
-manifest = json.load(open('{}.json'.format(args.package_type), 'r'))
-zip_filename = "{}-{}.zip".format(manifest['id'], args.release_tag)
+manifest = json.load(open('module.json', 'r'))
+zip_filename = "module.zip"
 
 # Write the version and download link to the manifest
 manifest['version'] = str(args.release_tag)
-manifest['manifest'] = "https://gitlab.com/{}/N5E-Conversion/releases/latest/downloads/module.json".format(gitlab_group)
-manifest['download'] = "https://gitlab.com/{}/N5E-Conversion/releases/{}/downloads/{}".format(gitlab_group, args.release_tag,
-                                                                                 zip_filename)
+manifest['manifest'] = "https://gitlab.com/{}/N5E-Conversion/releases/{}/download/module.json".format(gitlab_group,
+                                                                                                      args.release_ta, )
+manifest['download'] = "https://gitlab.com/{}/N5E-Conversion/releases/{}/download/{}".format(gitlab_group,
+                                                                                             args.release_tag,
+                                                                                             zip_filename)
 
 json.dump(manifest, open('{}.json'.format(args.package_type), 'w'), indent=2)
 
