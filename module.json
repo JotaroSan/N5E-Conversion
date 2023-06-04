@@ -5,17 +5,16 @@
   "relationships": {
     "systems": [
       {
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json", 
         "compatibility": {
           "minimum": "2.1.0", 
           "verified": "2.1.2"
         }, 
-        "id": "dnd5e", 
-        "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json"
+        "id": "dnd5e"
       }
     ]
   }, 
   "description": "An add on module that allows for use with the N5E ( Naruto Inspired 5e ) Role playing game. Application is not stand alone, requires DnD5e to function correctly.", 
-  "title": "N5E Conversion", 
   "packs": [
     {
       "name": "n5e-jutsu", 
@@ -81,10 +80,9 @@
       "type": "Item"
     }
   ], 
-  "compatibility": {
-    "minimum": 10, 
-    "verified": 11
-  }, 
+  "id": "N5E-Conversion", 
+  "title": "N5E Conversion", 
+  "manifest": "https://gitlab.com/JotaroSan/N5E-Conversion/releases/permalink/latest/downloads/module.json", 
   "languages": [
     {
       "lang": "en", 
@@ -101,7 +99,9 @@
       "name": "JotaroUchiha"
     }
   ], 
-  "download": "https://gitlab.com/JotaroSan/-/releases/v0.9.1/downloads/N5E-Conversion-v0.9.1.zip", 
-  "manifest": "https://gitlab.com/JotaroSan/-/releases/permalink/latest/downloads/N5E-Conversion.json", 
-  "id": "N5E-Conversion"
+  "download": "https://gitlab.com/JotaroSan/N5E-Conversion/releases/v0.9.1/downloads/N5E-Conversion-v0.9.1.zip", 
+  "compatibility": {
+    "minimum": 10, 
+    "verified": 11
+  }
 }
