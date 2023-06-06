@@ -40,7 +40,7 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "languages/en.json"
+      "path": "lang/en.json"
     }
   ],
   "packs": [
