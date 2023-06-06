@@ -27,6 +27,13 @@
         "id": "dnd5e",
         "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json"
       }
+    ],
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      }
     ]
   },
   "esmodules": [
