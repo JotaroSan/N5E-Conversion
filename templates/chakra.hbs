@@ -5,43 +5,42 @@
         <i class="fas fa-cog"></i>
     </a>
     <div class="attribute-value multiple">
-        <input name="system.attributes.cp.value" type="text" value="{{cp.value}}" placeholder="10"
+        <input name="system.attributes.cp.value" type="text" value="{{flags.N5E-Conversion.chakra.value}}" placeholder="10"
                data-tooltip="DND5E.ChakraPointsCurrent" data-dtype="Number">
         <span class="sep"> / </span>
-        <span data-tooltip="{{#if cp.max}}DND5E.ChakraPointsOverride{{else}}DND5E.ChakraPointsMax{{/if}}">
-            {{cp.max}}
+        <span data-tooltip="{{#if flags.N5E-Conversion.chakra.max}}DND5E.ChakraPointsOverride{{else}}DND5E.ChakraPointsMax{{/if}}">
+            {{flags.N5E-Conversion.chakra.max}}
         </span>
     </div>
     <footer class="attribute-footer">
         <input name="system.attributes.cp.temp" type="text" class="tempcp"
-               placeholder="+{{ localize 'DND5E.Temp' }}" value="{{cp.temp}}"
+               placeholder="+{{localize 'DND5E.Temp'}}" value="{{flags.N5E-Conversion.chakra.temp}}"
                data-tooltip="DND5E.ChakraPointsTemp" data-dtype="Number">
         <input name="system.attributes.cp.tempmax" type="text" class="tempcp"
-               placeholder="+{{ localize 'DND5E.Max' }}" value="{{cp.tempmax}}"
+               placeholder="+{{localize 'DND5E.Max'}}" value="{{flags.N5E-Conversion.chakra.tempMax}}"
                data-tooltip="DND5E.ChakraPointsTempMax" data-dtype="Number">
     </footer>
 </li>
 
-<!-- Chakra Dice Attribute -->
+<!-- Chakra Dice Attribute
 <li class="attribute chakra-die">
     <h4 class="attribute-name box-title">{{localize "DND5E.ChakraDie"}}</h4>
     <a class="config-button" data-action="chakra-die" data-tooltip="DND5E.ChakraDieConfig">
         <i class="fas fa-cog"></i>
     </a>
     <div class="attribute-value multiple">
-        <input name="system.attributes.cd.value" type="text" value="{{cd.value}}" placeholder="d6"
+        <input name="system.attributes.cd.value" type="text" value="{{actor.flags.N5E-Conversion.ChakraDice.value}}" placeholder="d6"
                data-tooltip="DND5E.ChakraDieCurrent" data-dtype="String">
         <span class="sep"> / </span>
-        <span data-tooltip="{{#if cd.max}}DND5E.ChakraDieOverride{{else}}DND5E.ChakraDieMax{{/if}}">
-            {{cd.max}}
+        <span data-tooltip="{{#if actor.flags.N5E-Conversion.ChakraDice.max}}DND5E.ChakraDieOverride{{else}}DND5E.ChakraDieMax{{/if}}">
+            {{actor.flags.N5E-Conversion.ChakraDice.max}}
         </span>
     </div>
     <footer class="attribute-footer">
         <input name="system.attributes.cd.temp" type="text" class="tempcd"
-               placeholder="+{{ localize 'DND5E.Temp' }}" value="{{cd.temp}}"
+               placeholder="+{{localize 'DND5E.Temp'}}" value="{{actor.flags.N5E-Conversion.ChakraDice.temp}}"
                data-tooltip="DND5E.ChakraDieTemp" data-dtype="String">
         <input name="system.attributes.cd.tempmax" type="text" class="tempcd"
-               placeholder="+{{ localize 'DND5E.Max' }}" value="{{cd.tempmax}}"
-               data-tooltip="DND5E.ChakraDieTempMax" data-dtype="String">
-    </footer>
-</li>
+               placeholder="+{{localize 'DND5E.Max'}}" value="{{actor.flags.N5E-Conversion.ChakraDice.tempMax}}"
+               data-tooltip="DND5E.ChakraDieTempMax" data-dtype="String
+--->

@@ -226,11 +226,35 @@ Hooks.on("setup", function () {
   );
 });
 
-Hooks.on('renderActorSheet5eCharacter', (sheet, html, data) => {
+Hooks.on('renderActorSheet5eCharacter', async (sheet, html, data) => {
+  const templateFile = "modules/N5E-Conversion/templates/chakra.hbs";
+  const chakraTemplate = await renderTemplate(templateFile);
 
-  const template_file = "modules/N5E-Conversion/templates/chakra.hbs"
-  const chakraTemplate = loadTemplates([template_file]);
+  const attributesSection = html.find('section.header-details ul.attributes');
+  if (attributesSection.length > 0) {
+    attributesSection.append(chakraTemplate);
+  }
+});
 
-  const hitDiceSection = html.find('section.header-details ul.attributes');
-  hitDiceSection.append(chakraTemplate);
+Hooks.on("createActor", (actor) => {
+  // Check if the created actor has the necessary flags
+  if (!actor.getFlag("N5E-Conversion", "chakra")) {
+    // Set the chakra flag
+    actor.setFlag("N5E-Conversion", "chakra", {
+      value: 10,
+      max: 200,
+      temp: 0,
+      tempMax: 0
+    });
+  }
+
+  if (!actor.getFlag("N5E-Conversion", "ChakraDice")) {
+    // Set the Chakra Dice flag
+    actor.setFlag("N5E-Conversion", "ChakraDice", {
+      value: 0,
+      max: 20,
+      temp: 0,
+      tempMax: 0
+    });
+  }
 });
