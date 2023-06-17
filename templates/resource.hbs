@@ -1,0 +1,20 @@
+{{#each resources}}
+    <li class="addar attribute resource">
+        <h4 class="attribute-name box-title">
+            {{label}}
+        </h4>
+        <div class="attribute-value">
+            <input type="text" name="{{name}}.value" value="{{value}}" placeholder="0" data-dtype="Number">
+            <span class="sep"> / </span>
+            <input type="text" name="{{name}}.max" value="{{max}}" placeholder="0" data-dtype="Number">
+        </div>
+        <footer class="attribute-footer">
+            <input name="{{name}}.temp" type="text"
+                   placeholder="+Temp" value="{{temp}}"
+                   data-dtype="Number" class="temphp">
+            <input name="{{name}}.tempmax" type="text"
+                   placeholder="+Temp Max" value="{{tempmax}}"
+                   data-dtype="Number" class="temphp">
+        </footer>
+    </li>
+{{/each}}

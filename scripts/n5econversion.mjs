@@ -29,66 +29,66 @@ Hooks.on("init", function() {
     // Remove All Existing DND5E Items
     CONFIG.DND5E.weaponIds = {};
     // Add missing weaponIds
-    CONFIG.DND5E.weaponIds["battlewire"] = "N5EConversion.n5e-items.81zHkZgJJUswAl8C";
-    CONFIG.DND5E.weaponIds["blowgun"] = "N5EConversion.n5e-items.ZdkI4f6cAvCaSDc1";
-    CONFIG.DND5E.weaponIds["handaxe"] = "N5EConversion.n5e-items.GUsi2ly8gxYK0TH2";
-    CONFIG.DND5E.weaponIds["chainedhandscythe"] = "N5EConversion.n5e-items.M8tl0zQAH18FxBLo";
-    CONFIG.DND5E.weaponIds["handscythe"] = "N5EConversion.n5e-items.X1dlx00oTkwMp6ei";
-    CONFIG.DND5E.weaponIds["kunai"] = "N5EConversion.n5e-items.RbcM59vdQ9ZgYBKV";
-    CONFIG.DND5E.weaponIds["quarterstaff"] = "N5EConversion.n5e-items.XAVJqdQWLqV8jffm";
-    CONFIG.DND5E.weaponIds["spear"] = "N5EConversion.n5e-items.Qrxp2ypJNrdBfnxF";
-    CONFIG.DND5E.weaponIds["tanto"] = "N5EConversion.n5e-items.HbrlOL6HWNiuNaiU";
-    CONFIG.DND5E.weaponIds["weightedchain"] = "N5EConversion.n5e-items.MVeoq1E1DCwCZTwc";
-    CONFIG.DND5E.weaponIds["senbon"] = "N5EConversion.n5e-items.AqeyHEGdWCFAqWP0";
-    CONFIG.DND5E.weaponIds["shortbow"] = "N5EConversion.n5e-items.1vdllonFUUQnkUvJ";
-    CONFIG.DND5E.weaponIds["shuriken"] = "N5EConversion.n5e-items.YReiEBmBtKhLaoxF";
-    CONFIG.DND5E.weaponIds["sling"] = "N5EConversion.n5e-items.yNkLtAbQTIZY7ZCC";
-    CONFIG.DND5E.weaponIds["broadsword"] = "N5EConversion.n5e-items.xe110rLxmQETPJyq";
-    CONFIG.DND5E.weaponIds["chainedspear"] = "N5EConversion.n5e-items.PTHvIz6IH9HpbHg7";
-    CONFIG.DND5E.weaponIds["combatbracers"] = "N5EConversion.n5e-items.7JdFwOiRWfq35OWT";
-    CONFIG.DND5E.weaponIds["greataxe"] = "N5EConversion.n5e-items.5xpZcxYjWmAjXo1j";
-    CONFIG.DND5E.weaponIds["hookedlance"] = "N5EConversion.n5e-items.bEtYwzE76RhPISms";
-    CONFIG.DND5E.weaponIds["ironclaw"] = "N5EConversion.n5e-items.00uRBzVYYgEZFy4Q";
-    CONFIG.DND5E.weaponIds["jitte"] = "N5EConversion.n5e-items.M5abrR0syMtZh0Xx";
-    CONFIG.DND5E.weaponIds["katana"] = "N5EConversion.n5e-items.h9iLNkcRhCnDZGAO";
-    CONFIG.DND5E.weaponIds["naginata"] = "N5EConversion.n5e-items.5Ay4NnbFHXHmFTi0";
-    CONFIG.DND5E.weaponIds["nunchaku"] = "N5EConversion.n5e-items.14f6YrXLHRNXJXzA";
-    CONFIG.DND5E.weaponIds["odachi"] = "N5EConversion.n5e-items.SMFAFXkdTIvipYqB";
-    CONFIG.DND5E.weaponIds["sasumata"] = "N5EConversion.n5e-items.pc6Z8vmwn4TKyXya";
-    CONFIG.DND5E.weaponIds["scythe"] = "N5EConversion.n5e-items.AEHqJwlyfAPCGPgX";
-    CONFIG.DND5E.weaponIds["tetsubo"] = "N5EConversion.n5e-items.mlxyNFZW5tPGsb0R";
-    CONFIG.DND5E.weaponIds["tonfa"] = "N5EConversion.n5e-items.AxFRDY4CRyUOEoLo";
-    CONFIG.DND5E.weaponIds["warclub"] = "N5EConversion.n5e-items.lN8v13BroQh5YgI5";
-    CONFIG.DND5E.weaponIds["whip"] = "N5EConversion.n5e-items.W5ZfgVCgxsGpLzR4";
-    CONFIG.DND5E.weaponIds["knuckleblade"] = "N5EConversion.n5e-items.VSbOUoRmdTYpBPaS";
-    CONFIG.DND5E.weaponIds["chakram"] = "N5EConversion.n5e-items.L1AT9ekTDUJQHB9T";
-    CONFIG.DND5E.weaponIds["monsterchakram"] = "N5EConversion.n5e-items.nMbckfVmQyomfZY3";
-    CONFIG.DND5E.weaponIds["longbow"] = "N5EConversion.n5e-items.ZTgwdJyugEGiMJqu";
-    CONFIG.DND5E.weaponIds["crossbowhand"] = "N5EConversion.n5e-items.7efcoLqgvay98RUV";
-    CONFIG.DND5E.weaponIds["crossbowheavy"] = "N5EConversion.n5e-items.OU67WU4IBvI5Uszm";
-    CONFIG.DND5E.weaponIds["net"] = "N5EConversion.n5e-items.0gs6UCdBaKZ5AIMl";
-    CONFIG.DND5E.weaponIds["fumashuriken"] = "N5EConversion.n5e-items.TXvRdUiQQuxwTgyF";
-    CONFIG.DND5E.weaponIds["monstershuriken"] = "N5EConversion.n5e-items.sxBvPLkkop5jkScv";
+    CONFIG.DND5E.weaponIds["battlewire"] = "n5econversion.n5e-items.81zHkZgJJUswAl8C";
+    CONFIG.DND5E.weaponIds["blowgun"] = "n5econversion.n5e-items.ZdkI4f6cAvCaSDc1";
+    CONFIG.DND5E.weaponIds["handaxe"] = "n5econversion.n5e-items.GUsi2ly8gxYK0TH2";
+    CONFIG.DND5E.weaponIds["chainedhandscythe"] = "n5econversion.n5e-items.M8tl0zQAH18FxBLo";
+    CONFIG.DND5E.weaponIds["handscythe"] = "n5econversion.n5e-items.X1dlx00oTkwMp6ei";
+    CONFIG.DND5E.weaponIds["kunai"] = "n5econversion.n5e-items.RbcM59vdQ9ZgYBKV";
+    CONFIG.DND5E.weaponIds["quarterstaff"] = "n5econversion.n5e-items.XAVJqdQWLqV8jffm";
+    CONFIG.DND5E.weaponIds["spear"] = "n5econversion.n5e-items.Qrxp2ypJNrdBfnxF";
+    CONFIG.DND5E.weaponIds["tanto"] = "n5econversion.n5e-items.HbrlOL6HWNiuNaiU";
+    CONFIG.DND5E.weaponIds["weightedchain"] = "n5econversion.n5e-items.MVeoq1E1DCwCZTwc";
+    CONFIG.DND5E.weaponIds["senbon"] = "n5econversion.n5e-items.AqeyHEGdWCFAqWP0";
+    CONFIG.DND5E.weaponIds["shortbow"] = "n5econversion.n5e-items.1vdllonFUUQnkUvJ";
+    CONFIG.DND5E.weaponIds["shuriken"] = "n5econversion.n5e-items.YReiEBmBtKhLaoxF";
+    CONFIG.DND5E.weaponIds["sling"] = "n5econversion.n5e-items.yNkLtAbQTIZY7ZCC";
+    CONFIG.DND5E.weaponIds["broadsword"] = "n5econversion.n5e-items.xe110rLxmQETPJyq";
+    CONFIG.DND5E.weaponIds["chainedspear"] = "n5econversion.n5e-items.PTHvIz6IH9HpbHg7";
+    CONFIG.DND5E.weaponIds["combatbracers"] = "n5econversion.n5e-items.7JdFwOiRWfq35OWT";
+    CONFIG.DND5E.weaponIds["greataxe"] = "n5econversion.n5e-items.5xpZcxYjWmAjXo1j";
+    CONFIG.DND5E.weaponIds["hookedlance"] = "n5econversion.n5e-items.bEtYwzE76RhPISms";
+    CONFIG.DND5E.weaponIds["ironclaw"] = "n5econversion.n5e-items.00uRBzVYYgEZFy4Q";
+    CONFIG.DND5E.weaponIds["jitte"] = "n5econversion.n5e-items.M5abrR0syMtZh0Xx";
+    CONFIG.DND5E.weaponIds["katana"] = "n5econversion.n5e-items.h9iLNkcRhCnDZGAO";
+    CONFIG.DND5E.weaponIds["naginata"] = "n5econversion.n5e-items.5Ay4NnbFHXHmFTi0";
+    CONFIG.DND5E.weaponIds["nunchaku"] = "n5econversion.n5e-items.14f6YrXLHRNXJXzA";
+    CONFIG.DND5E.weaponIds["odachi"] = "n5econversion.n5e-items.SMFAFXkdTIvipYqB";
+    CONFIG.DND5E.weaponIds["sasumata"] = "n5econversion.n5e-items.pc6Z8vmwn4TKyXya";
+    CONFIG.DND5E.weaponIds["scythe"] = "n5econversion.n5e-items.AEHqJwlyfAPCGPgX";
+    CONFIG.DND5E.weaponIds["tetsubo"] = "n5econversion.n5e-items.mlxyNFZW5tPGsb0R";
+    CONFIG.DND5E.weaponIds["tonfa"] = "n5econversion.n5e-items.AxFRDY4CRyUOEoLo";
+    CONFIG.DND5E.weaponIds["warclub"] = "n5econversion.n5e-items.lN8v13BroQh5YgI5";
+    CONFIG.DND5E.weaponIds["whip"] = "n5econversion.n5e-items.W5ZfgVCgxsGpLzR4";
+    CONFIG.DND5E.weaponIds["knuckleblade"] = "n5econversion.n5e-items.VSbOUoRmdTYpBPaS";
+    CONFIG.DND5E.weaponIds["chakram"] = "n5econversion.n5e-items.L1AT9ekTDUJQHB9T";
+    CONFIG.DND5E.weaponIds["monsterchakram"] = "n5econversion.n5e-items.nMbckfVmQyomfZY3";
+    CONFIG.DND5E.weaponIds["longbow"] = "n5econversion.n5e-items.ZTgwdJyugEGiMJqu";
+    CONFIG.DND5E.weaponIds["crossbowhand"] = "n5econversion.n5e-items.7efcoLqgvay98RUV";
+    CONFIG.DND5E.weaponIds["crossbowheavy"] = "n5econversion.n5e-items.OU67WU4IBvI5Uszm";
+    CONFIG.DND5E.weaponIds["net"] = "n5econversion.n5e-items.0gs6UCdBaKZ5AIMl";
+    CONFIG.DND5E.weaponIds["fumashuriken"] = "n5econversion.n5e-items.TXvRdUiQQuxwTgyF";
+    CONFIG.DND5E.weaponIds["monstershuriken"] = "n5econversion.n5e-items.sxBvPLkkop5jkScv";
 
     // Armor Proficiency
     // Remove All Existing DND5E Items
     CONFIG.DND5E.armorIds = {};
     // Add missing Armor Proficincies
-    CONFIG.DND5E.armorIds["padded"] = "N5EConversion.n5e-items.PXA5xkWhB5D1y2ZL";
-    CONFIG.DND5E.armorIds["leather"] = "N5EConversion.n5e-items.wr07gpjgWZQw2NgC";
-    CONFIG.DND5E.armorIds["studded"] = "N5EConversion.n5e-items.zHootXIbZBSCHawn";
-    CONFIG.DND5E.armorIds["combat"] = "N5EConversion.n5e-items.II33J57LVqZSqnW2";
-    CONFIG.DND5E.armorIds["armored"] = "N5EConversion.n5e-items.LfNh1vvFhiIFlKdg";
-    CONFIG.DND5E.armorIds["chunin"] = "N5EConversion.n5e-items.ycaJ6PMpeLn8Ymw7";
-    CONFIG.DND5E.armorIds["reinforced"] = "N5EConversion.n5e-items.oUeGPcPifVZsUVrv";
-    CONFIG.DND5E.armorIds["flak"] = "N5EConversion.n5e-items.lY4pmzqaXsy7c0Vy";
-    CONFIG.DND5E.armorIds["armorflak"] = "N5EConversion.n5e-items.I7yXden0O9KSv7tk";
-    CONFIG.DND5E.armorIds["battle"] = "N5EConversion.n5e-items.Rc8XgYyUD3Vd9XU1";
-    CONFIG.DND5E.armorIds["shinobi"] = "N5EConversion.n5e-items.90v6et8pq48v72O5";
-    CONFIG.DND5E.armorIds["jonin"] = "N5EConversion.n5e-items.A6gXO1rI6UWUQnJ9";
-    CONFIG.DND5E.armorIds["armoredjonin"] = "N5EConversion.n5e-items.WFkedOjW63ZeVCDo";
-    CONFIG.DND5E.armorIds["ronin"] = "N5EConversion.n5e-items.0g3HQc6zT0GmYoYj";
-    CONFIG.DND5E.armorIds["samurai"] = "N5EConversion.n5e-items.1ylLZzKoatc5kybx";
+    CONFIG.DND5E.armorIds["padded"] = "n5econversion.n5e-items.PXA5xkWhB5D1y2ZL";
+    CONFIG.DND5E.armorIds["leather"] = "n5econversion.n5e-items.wr07gpjgWZQw2NgC";
+    CONFIG.DND5E.armorIds["studded"] = "n5econversion.n5e-items.zHootXIbZBSCHawn";
+    CONFIG.DND5E.armorIds["combat"] = "n5econversion.n5e-items.II33J57LVqZSqnW2";
+    CONFIG.DND5E.armorIds["armored"] = "n5econversion.n5e-items.LfNh1vvFhiIFlKdg";
+    CONFIG.DND5E.armorIds["chunin"] = "n5econversion.n5e-items.ycaJ6PMpeLn8Ymw7";
+    CONFIG.DND5E.armorIds["reinforced"] = "n5econversion.n5e-items.oUeGPcPifVZsUVrv";
+    CONFIG.DND5E.armorIds["flak"] = "n5econversion.n5e-items.lY4pmzqaXsy7c0Vy";
+    CONFIG.DND5E.armorIds["armorflak"] = "n5econversion.n5e-items.I7yXden0O9KSv7tk";
+    CONFIG.DND5E.armorIds["battle"] = "n5econversion.n5e-items.Rc8XgYyUD3Vd9XU1";
+    CONFIG.DND5E.armorIds["shinobi"] = "n5econversion.n5e-items.90v6et8pq48v72O5";
+    CONFIG.DND5E.armorIds["jonin"] = "n5econversion.n5e-items.A6gXO1rI6UWUQnJ9";
+    CONFIG.DND5E.armorIds["armoredjonin"] = "n5econversion.n5e-items.WFkedOjW63ZeVCDo";
+    CONFIG.DND5E.armorIds["ronin"] = "n5econversion.n5e-items.0g3HQc6zT0GmYoYj";
+    CONFIG.DND5E.armorIds["samurai"] = "n5econversion.n5e-items.1ylLZzKoatc5kybx";
 
     // Add Missing ArmorClasses
     CONFIG.DND5E.armorClasses = {};
@@ -105,11 +105,11 @@ Hooks.on("init", function() {
 
 	// Add Status Effects
 	// Elemental
-	CONFIG.statusEffects.push({ id: "burned1", label: "Burned [1]", icon: "modules/N5E-Conversion/icons/conditions/Burned-1.png" })
-	CONFIG.statusEffects.push({ id: "burned2", label: "Burned [2]", icon: "modules/N5E-Conversion/icons/conditions/Burned-2.png" })
-	CONFIG.statusEffects.push({ id: "burned3", label: "Burned [3]", icon: "modules/N5E-Conversion/icons/conditions/Burned-3.png" })
-	CONFIG.statusEffects.push({ id: "burned4", label: "Burned [4]", icon: "modules/N5E-Conversion/icons/conditions/Burned-4.png" })
-	CONFIG.statusEffects.push({ id: "burned5", label: "Burned [5]", icon: "modules/N5E-Conversion/icons/conditions/Burned-5.png" })
+	CONFIG.statusEffects.push({ id: "burned1", label: "Burned [1]", icon: "modules/n5econversion/icons/conditions/Burned-1.png" })
+	CONFIG.statusEffects.push({ id: "burned2", label: "Burned [2]", icon: "modules/n5econversion/icons/conditions/Burned-2.png" })
+	CONFIG.statusEffects.push({ id: "burned3", label: "Burned [3]", icon: "modules/n5econversion/icons/conditions/Burned-3.png" })
+	CONFIG.statusEffects.push({ id: "burned4", label: "Burned [4]", icon: "modules/n5econversion/icons/conditions/Burned-4.png" })
+	CONFIG.statusEffects.push({ id: "burned5", label: "Burned [5]", icon: "modules/n5econversion/icons/conditions/Burned-5.png" })
     // Mental
     // Sensory
     // Physical
@@ -174,7 +174,7 @@ Hooks.on("init", function() {
 // Proficiency Wrapper
 // Modifies Level being ingest to produce correct proficiency mod for N5E system
 Hooks.once('init', async function() {
-  libWrapper.register('N5E-Conversion', 'dnd5e.documents.Proficiency.calculateMod', function (wrapped, lvl) {
+  libWrapper.register('n5econversion', 'dnd5e.documents.Proficiency.calculateMod', function (wrapped, lvl) {
     const level = lvl;
 	var newMod = 3;
 	if (level >= 0 && level < 4) {
@@ -195,6 +195,11 @@ Hooks.once('init', async function() {
 
     return wrapped(newMod);
   }, 'WRAPPER');
+});
+
+Hooks.once("setup", function() {
+  CONFIG.DND5E.abilityConsumptionTypes["flags.n5econversion.resource.chakra"] = 'Chakra';
+  CONFIG.DND5E.abilityConsumptionTypes["flags.n5econversion.resource.chakraDice"] = 'Chakra Dice';
 });
 
 
@@ -226,35 +231,81 @@ Hooks.on("setup", function () {
   );
 });
 
-Hooks.on('renderActorSheet5eCharacter', async (sheet, html, data) => {
-  const templateFile = "modules/N5E-Conversion/templates/chakra.hbs";
-  const chakraTemplate = await renderTemplate(templateFile);
+// Inject resources onto sheet.
+Hooks.on("renderActorSheet", async function(sheet, html) {
+  sheet.document.setFlag("n5econversion", "resource.chakra", { label: 'Chakra', temp: 0, tempmax: 0 });
+  sheet.document.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice', temp: 0, tempmax: 0  });
+  if (sheet.document.type !== "character") return;
+  const box = html[0].querySelector(".dnd5e.sheet.actor .header-details ul.attributes");
+  const div = document.createElement("DIV");
+  const resources = Object.entries(sheet.document.flags.n5econversion.resource ?? {}).reduce((acc, [id, data]) => {
+    if (!id) return acc;
+    acc.push({
+      label: (data.label || "").trim(),
+      name: `flags.n5econversion.resource.${id}`,
+      id,
+      temp: data.temp,
+      tempmax: data.tempmax,
+      value: data.value || null,
+      max: data.max || null
+    });
+    return acc;
+  }, []);
+  const template = "modules/n5econversion/templates/resource.hbs";
+  div.innerHTML = await renderTemplate(template, {resources});
 
-  const attributesSection = html.find('section.header-details ul.attributes');
-  if (attributesSection.length > 0) {
-    attributesSection.append(chakraTemplate);
+   div.querySelectorAll("input[type='text'][data-dtype='Number']").forEach(input => {
+     input.addEventListener("change", sheet._onChangeInputDelta.bind(sheet));
+   });
+
+   const foc = div.querySelector(`[name="${sheet._addarFocus}"]`);
+   box.append(...div.children);
+   if (foc && sheet._addarFocus.includes("addar")) foc.focus();
+
+   html[0].querySelectorAll("input").forEach(input => input.addEventListener("focus", (event) => {
+     sheet._addarFocus = event.currentTarget.name;
+     if (event.currentTarget.closest(".attributes")) event.currentTarget.select();
+   }));
+
+});
+
+/* Inject custom resource consumption option onto item sheet. */
+Hooks.on("renderItemSheet", function(sheet, html) {
+  if (sheet.item.system.consume?.type !== "flags.n5econversion.resource") return;
+  const actor = sheet.item.actor;
+  const ids = Object.keys(actor?.flags.n5econversion?.resource ?? {});
+  if (!ids.length) return;
+  const selected = sheet.item.system.consume.target;
+  const options = ids.reduce((acc, id) => {
+    const label = actor.flags.n5econversion.resource[id].label || game.i18n.localize("n5econversion.Resource");
+    const value = `flags.n5econversion.resource.${id}.value`;
+    const s = (value === selected) ? "selected" : "";
+    return acc + `<option value="${value}" ${s}>${label}</option>`;
+  }, "<option value=''></option>");
+  const tar = html[0].querySelector("[name='system.consume.target']");
+  if (tar) tar.innerHTML = options;
+});
+
+/* Adjust consumed target during item usage. */
+Hooks.on("dnd5e.preItemUsageConsumption", function(item, options, config) {
+  if (options.consumeResource && item.system.consume.target.startsWith("flags.n5econversion.resource")) {
+    options.consumeResource = false;
+    options.consumeCustomResource = item.system.consume.target;
   }
 });
 
-Hooks.on("createActor", (actor) => {
-  // Check if the created actor has the necessary flags
-  if (!actor.getFlag("N5E-Conversion", "chakra")) {
-    // Set the chakra flag
-    actor.setFlag("N5E-Conversion", "chakra", {
-      value: 10,
-      max: 200,
-      temp: 0,
-      tempMax: 0
-    });
+/* Adjust consumed target during item usage. */
+Hooks.on("dnd5e.itemUsageConsumption", function(item, options, config, updates) {
+  const name = options.consumeCustomResource;
+  if (!name) return;
+  const newValue = foundry.utils.getProperty(item.actor, name) - (item.system.consume.amount || 1);
+  if (newValue < 0) {
+    ui.notifications.warn(game.i18n.format("DND5E.ConsumeWarningNoQuantity", {
+      name: item.name,
+      type: CONFIG.DND5E.abilityConsumptionTypes[item.system.consume.type]
+    }));
+    return false;
   }
-
-  if (!actor.getFlag("N5E-Conversion", "ChakraDice")) {
-    // Set the Chakra Dice flag
-    actor.setFlag("N5E-Conversion", "ChakraDice", {
-      value: 0,
-      max: 20,
-      temp: 0,
-      tempMax: 0
-    });
-  }
+  updates.actorUpdates[name] = newValue;
 });
+
