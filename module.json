@@ -37,7 +37,7 @@
     ]
   },
   "esmodules": [
-    "scripts/n5econversion.mjs"
+    "./n5econversion.mjs"
   ],
   "scripts": [],
   "styles": [

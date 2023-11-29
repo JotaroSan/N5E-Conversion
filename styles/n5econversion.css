@@ -5,3 +5,9 @@
 .dnd5e.sheet.actor.character {
     min-width: 850px !important;
 }
+
+/* Hide label and input for system.currency.xx except when xx == gp */
+input[name^="system.currency."]:not([name="system.currency.gp"]),
+label[for^="system.currency."]:not([for="system.currency.gp"]) {
+  display: none;
+}
