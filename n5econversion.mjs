@@ -6,6 +6,11 @@ import N5ECONFIG from "./module/config.mjs";
 /* Set Constants */
 const moduleID = "n5econversion";
 
+/* Debug Section --- TURN OFF WHEN DONE --- */
+Hooks.once("init", function() {
+    CONFIG.debug.hooks = true;
+});
+
 /* Hook & Merge N5E Config */
 Hooks.once("init", () => {
     CONFIG.DND5E.weaponProperties = {};
@@ -41,6 +46,29 @@ Hooks.once('init', async function() {
 });
 
 
+/* Add Half proficiency to untrained ability score saves for N5E System */
+Hooks.once('init', async function() {
+libWrapper.register(moduleID, 'dnd5e.documents.Actor5e.prototype._prepareAbilities', function(wrapped, ...args) {
+    console.log('triggered');
+    // Call the original _prepareData function
+    const result = wrapped.apply(this, args);
+
+    // Assuming _prepareAbilities is called within _prepareData
+    // and modifies this.data in some way:
+    if (this.data.type === 'character' || this.data.type === 'npc') { // Adjust according to when you need to apply changes
+      for (const [id, abl] of Object.entries(this.data.data.abilities)) {
+        if (!Number.isNumeric(abl.saveProf.term)) {
+          // Modify the abilities as needed
+          abl.save += Math.floor(abl.saveProf.flat / 2);
+        }
+      }
+    }
+
+    return result;
+  }, 'WRAPPER');
+});
+
+
 // Remove Things that are no longer needed
 Hooks.on("setup", function () {
   // Remove Nature, Religion and Arcana skills
@@ -67,10 +95,13 @@ Hooks.on("setup", function () {
 
 // Inject resources onto sheet.
 Hooks.on("renderActorSheet", async function(sheet, html) {
-  sheet.document.setFlag("n5econversion", "resource.chakra", { label: 'Chakra', temp: 0, tempmax: 0 });
-  sheet.document.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice', temp: 0, tempmax: 0  });
+  sheet.document.setFlag("n5econversion", "resource.chakra", { label: 'Chakra',value: 10, max:10, temp: 10, tempmax: 0 });
+  sheet.document.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice',value: 10, max:10, temp: 10, tempmax: 0  });
+  sheet.document.setFlag("n5econversion", "resource.ninjutsuSave", { label: 'Ninjutsu Save',value: 10});
+  sheet.document.setFlag("n5econversion", "resource.genjutsuSave", { label: 'Genjutsu Save',value: 10});
+  sheet.document.setFlag("n5econversion", "resource.taijutsuSave", { label: 'Taijutsu Save',value: 10});
   if (sheet.document.type !== "character") return;
-  const box = html[0].querySelector(".dnd5e.sheet.actor .header-details ul.attributes");
+  const box = html[0].querySelector(".dnd5e.sheet.actor .header-details");
   const div = document.createElement("DIV");
   const resources = Object.entries(sheet.document.flags.n5econversion.resource ?? {}).reduce((acc, [id, data]) => {
     if (!id) return acc;

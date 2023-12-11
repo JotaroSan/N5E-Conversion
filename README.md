@@ -37,7 +37,7 @@ N5E is a Foundry Add-On Module to convert the standard DND5E to the Naruto Based
 29. Added in hook to fix proficiency modifier
 
 ## Required 
-- Foundry V10
+- Foundry V11
 - DND5E System Installed
 
 ## STRONGLY RECCOMENDED

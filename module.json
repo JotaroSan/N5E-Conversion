@@ -32,7 +32,10 @@
       {
         "id": "lib-wrapper",
         "type": "module",
-        "compatibility": {}
+        "compatibility": {
+          "minimum": "1.0.0.0",
+          "verified": "1.12.6.0"
+        }
       }
     ]
   },
@@ -53,7 +56,6 @@
   "packs": [
     {
       "name": "n5e-jutsu",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - Jutsu Database",
       "flags": {},
@@ -61,8 +63,7 @@
       "type": "Item"
     },
     {
-      "name": "n5e-clans-features",
-      "system": "dnd5e",
+      "name": "n5e-clan-features",
       "private": false,
       "label": "N5E - Clan Features Database",
       "flags": {},
@@ -71,7 +72,6 @@
     },
     {
       "name": "n5e-classes",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - Classes Database",
       "flags": {},
@@ -80,7 +80,6 @@
     },
     {
       "name": "n5e-class-features",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - Class Features Database",
       "flags": {},
@@ -89,7 +88,6 @@
     },
     {
       "name": "n5e-stances-and-feats",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - Stances and Feats Database",
       "flags": {},
@@ -98,7 +96,6 @@
     },
     {
       "name": "n5e-items",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - Items Database",
       "flags": {},
@@ -107,12 +104,27 @@
     },
     {
       "name": "n5e-npc-traits",
-      "system": "dnd5e",
       "private": false,
       "label": "N5E - NPC traits Database",
       "flags": {},
       "path": "packs/npc-traits.db",
       "type": "Item"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "N5E Resources",
+      "color": "#ff8040",
+      "sorting": "a",
+      "packs": [
+        "n5e-npc-traits",
+        "n5e-items",
+        "n5e-stances-and-feats",
+        "n5e-class-features",
+        "n5e-classes",
+        "n5e-jutsu",
+        "n5e-clan-features"
+      ]
     }
   ],
   "url": "#{URL}#",
