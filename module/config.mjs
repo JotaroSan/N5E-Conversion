@@ -101,7 +101,41 @@ N5ECONFIG.DND5E.armorClasses = {
 };
 /* Add N5E Status Effects */
 N5ECONFIG.DND5E.statusEffects = [
-  { id: "burned1", label: "Burned [1]", icon: "modules/n5econversion/icons/conditions/Burned-1.png" }
+    // General Conditions
+        { id: "dying", label: "Dying", icon: "" },
+        { id: "incapacitated", label: "Incapacitated", icon: "" },
+        { id: "exhaustion", label: "Exhaustion", icon: "" },
+        { id: "unconscious", label: "Unconscious", icon: "" },
+        { id: "petrified", label: "Petrified", icon: "" },
+    // Elemental Conditions
+        { id: "burned", label: "Burned", icon: "modules/n5econversion/icons/conditions/Burned-1.png" },
+        { id: "chilled", label: "Chilled", icon: "" },
+        { id: "corroded", label: "Corroded", icon: "" },
+        { id: "shocked", label: "Shocked", icon: "" },
+        { id: "poisoned", label: "Poisoned/Envenomed", icon: "" },
+    // Physical Conditions
+        { id: "bruised", label: "Bruised", icon: "" },
+        { id: "staggered", label: "Staggered", icon: "" },
+        { id: "bleeding", label: "Bleeding", icon: "" },
+        { id: "lacerated", label: "Lacerated", icon: "" },
+        { id: "grappled", label: "Grappled", icon: "" },
+        { id: "prone", label: "Prone", icon: "" },
+        { id: "restrained", label: "Restrained", icon: "" },
+        { id: "stunned", label: "Stunned", icon: "" },
+        { id: "weakened", label: "Weakened", icon: "" },
+    // Mental Conditions
+        { id: "demoralized", label: "Demoralized/Fear", icon: "" },
+        { id: "berserk", label: "Berserk", icon: "" },
+        { id: "charmed", label: "Charmed", icon: "" },
+        { id: "concussed", label: "Concussed", icon: "" },
+        { id: "confused", label: "Confused", icon: "" },
+        { id: "slowed", label: "Slowed", icon: "" },
+        { id: "sealed", label: "Sealed", icon: "" },
+    // Sensory Conditions
+        { id: "blinded", label: "Blinded", icon: "" },
+        { id: "dazzled", label: "Dazzled", icon: "" },
+        { id: "invisible", label: "Invisible", icon: "" },
+        { id: "deafened", label: "Deafened", icon: "" }
 ];
 /* Add N5E Weapon Properties */
 N5ECONFIG.DND5E.weaponProperties = {
