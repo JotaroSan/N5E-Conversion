@@ -1,7 +1,3 @@
-[data-pack^="dnd5e"] {
-  display: none !important;
-}
-
 .dnd5e.sheet.actor.character {
     min-width: 850px !important;
 }

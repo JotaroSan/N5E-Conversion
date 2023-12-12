@@ -103,6 +103,14 @@
       "type": "Item"
     },
     {
+      "name": "n5e-skill-based-actions",
+      "private": false,
+      "label": "N5E - Skill Based Actions Database",
+      "flags": {},
+      "path": "packs/skill-based-action.db",
+      "type": "Item"
+    },
+    {
       "name": "n5e-npc-traits",
       "private": false,
       "label": "N5E - NPC traits Database",
@@ -123,7 +131,8 @@
         "n5e-class-features",
         "n5e-classes",
         "n5e-jutsu",
-        "n5e-clan-features"
+        "n5e-clan-features",
+        "n5e-skill-based-actions"
       ]
     }
   ],
