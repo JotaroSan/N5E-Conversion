@@ -111,6 +111,14 @@
       "type": "Item"
     },
     {
+      "name": "n5e-subclasses",
+      "private": false,
+      "label": "N5E - Subclasses",
+      "flags": {},
+      "path": "packs/subclasses.db",
+      "type": "Item"
+    },
+    {
       "name": "n5e-npc-traits",
       "private": false,
       "label": "N5E - NPC traits Database",
@@ -132,7 +140,8 @@
         "n5e-classes",
         "n5e-jutsu",
         "n5e-clan-features",
-        "n5e-skill-based-actions"
+        "n5e-skill-based-actions",
+        "n5e-subclasses"
       ]
     }
   ],
