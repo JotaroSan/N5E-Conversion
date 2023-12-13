@@ -1,5 +1,3 @@
-2023/12/12-14:52:27.263 4a2c Recovering log #5
-2023/12/12-14:52:27.263 4a2c Level-0 table #7: started
-2023/12/12-14:52:27.264 4a2c Level-0 table #7: 1621 bytes OK
-2023/12/12-14:52:27.269 4a2c Delete type=0 #5
-2023/12/12-14:52:27.269 4a2c Delete type=3 #4
+2023/12/13-13:00:41.893 7f40 Recovering log #10
+2023/12/13-13:00:41.899 7f40 Delete type=0 #10
+2023/12/13-13:00:41.899 7f40 Delete type=3 #9
