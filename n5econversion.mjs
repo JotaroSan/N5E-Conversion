@@ -1,5 +1,4 @@
 /* N5E Conversion Module */
-
 /* Import Files */
 import N5ECONFIG from "./module/config.mjs";
 
@@ -13,10 +12,12 @@ Hooks.once("init", function() {
 
 /* Hook & Merge N5E Config */
 Hooks.once("init", () => {
+    /* System does not use core Dnd5e items/armor, so while active this module will remove them */
     CONFIG.DND5E.weaponProperties = {};
     CONFIG.DND5E.armorClasses = {};
     CONFIG.DND5E.armorIds = {};
     CONFIG.DND5E.weaponIds = {};
+    /* Quick signifier */
     console.log('N5E Module Object Merge');
     foundry.utils.mergeObject(CONFIG, N5ECONFIG);
 });
@@ -49,7 +50,6 @@ Hooks.once('init', async function() {
 /* Add Half proficiency to untrained ability score saves for N5E System */
 Hooks.once('init', async function() {
 libWrapper.register(moduleID, 'dnd5e.documents.Actor5e.prototype._prepareAbilities', function(wrapped, ...args) {
-    console.log('triggered');
     // Call the original _prepareData function
     const result = wrapped.apply(this, args);
 
@@ -94,16 +94,16 @@ Hooks.on("setup", function () {
 });
 
 // Inject resources onto sheet.
-Hooks.on("renderActorSheet", async function(sheet, html) {
+Hooks.on("renderActorSheet5e", async function(sheet, html) {
   sheet.document.setFlag("n5econversion", "resource.chakra", { label: 'Chakra',value: 10, max:10, temp: 10, tempmax: 0 });
   sheet.document.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice',value: 10, max:10, temp: 10, tempmax: 0  });
-  sheet.document.setFlag("n5econversion", "resource.ninjutsuSave", { label: 'Ninjutsu Save',value: 10});
-  sheet.document.setFlag("n5econversion", "resource.genjutsuSave", { label: 'Genjutsu Save',value: 10});
-  sheet.document.setFlag("n5econversion", "resource.taijutsuSave", { label: 'Taijutsu Save',value: 10});
+  sheet.document.setFlag("n5econversion", "resource.ninjutsuSave", { label: 'Ninjutsu Save',value: 10,formula: ''});
+  sheet.document.setFlag("n5econversion", "resource.genjutsuSave", { label: 'Genjutsu Save',value: 10,formula: ''});
+  sheet.document.setFlag("n5econversion", "resource.taijutsuSave", { label: 'Taijutsu Save',value: 10,formula: ''});
   if (sheet.document.type !== "character") return;
   const box = html[0].querySelector(".dnd5e.sheet.actor .header-details");
   const div = document.createElement("DIV");
-  const resources = Object.entries(sheet.document.flags.n5econversion.resource ?? {}).reduce((acc, [id, data]) => {
+  const resources = Object.entries(document.flags.n5econversion.resource ?? {}).reduce((acc, [id, data]) => {
     if (!id) return acc;
     acc.push({
       label: (data.label || "").trim(),

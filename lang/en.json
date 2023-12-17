@@ -77,5 +77,8 @@
   "DND5E.Weight": "Bulk",
   "DND5E.AbbreviationLbs":"Bulk",
   "DND5E.ChakraPoints":"Chakra Points",
-  "DND5E.ChakraDie":"Chakra Die"
+  "DND5E.ChakraDie":"Chakra Die",
+  "DND5E.NinjutsuSave":"Ninjutsu Save",
+  "DND5E.TaijutsuSave":"Taijutsu Save",
+  "DND5E.GenjutsuSave":"Genjutsu Save"
 }
