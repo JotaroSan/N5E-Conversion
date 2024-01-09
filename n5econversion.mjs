@@ -28,19 +28,17 @@ Hooks.once('init', async function() {
     const level = lvl;
 	var newMod = 3;
 	if (level >= 0 && level < 4) {
-		newMod =  5;
+		newMod =  3;
 	  } else if (level >= 4 && level <= 6) {
-		newMod =  9;
+		newMod =  4;
 	  } else if (level >= 7 && level <= 9) {
-		newMod =  13;
+		newMod =  5;
 	  } else if (level >= 10 && level <= 12) {
-		newMod =  17;
-	  } else if (level >= 13 && level <= 15) {
-		newMod =  21;
+		newMod =  6;
 	  } else if (level >= 16 && level <= 18) {
-		newMod =  25;
+		newMod =  7;
 	  } else if (level >= 19 && level <= 20) {
-		newMod =  29;
+		newMod =  8;
 	  }
     return wrapped(newMod);
   }, 'WRAPPER');
