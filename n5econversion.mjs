@@ -105,53 +105,26 @@ Hooks.on("createActor", async function(actor, options, userId) {
     // Additional setup or flag settings can be added here
 });
 
+/* Hook to incorporate custom character sheet */
+Hooks.once('init', function() {
+    Actors.registerSheet('n5econversion', N5EActorSheet, {
+        types: ['character'],
+        makeDefault: true
+    });
+});
+
+class N5EActorSheet extends ActorSheet {
+    get template() {
+        return 'modules/n5econversion/templates/actor/character-sheet.hbs';
+    }
+}
+
+
 // Hook for actor sheet rendering - for updating the UI
 Hooks.on("renderActorSheet5e", async function(sheet, html) {
     // Accessing flags
     const flagData = sheet.actor.getFlag("n5econversion", "resource") ?? {};
 
-    const resources = {
-            const resources = {
-                chakra: flagData["chakra"] ? {
-                    label: flagData["chakra"].label || 'Chakra',
-                    name: `flags.n5econversion.resource.chakra`,
-                    value: flagData["chakra"].value || null,
-                    max: flagData["chakra"].max || null,
-                    temp: flagData["chakra"].temp,
-                    tempmax: flagData["chakra"].tempmax
-                } : null,
-                chakraDice: flagData["chakraDice"] ? {
-                    label: flagData["chakraDice"].label || 'Chakra Dice',
-                    name: `flags.n5econversion.resource.chakraDice`,
-                    value: flagData["chakraDice"].value || null,
-                    max: flagData["chakraDice"].max || null,
-                    temp: flagData["chakraDice"].temp,
-                    tempmax: flagData["chakraDice"].tempmax
-                } : null
-            };
-    };
-
-    // Inject custom HTML for resources
-    const attributesContainer = html.find(".dnd5e.sheet.actor .header-details ul.attributes").first();
-    const div = document.createElement("DIV");
-    const template = "modules/n5econversion/templates/resource.hbs";
-    div.innerHTML = await renderTemplate(template, {resources});
-    attributesContainer.append(div);
-
-    // Handling Inspiration 2 & 3
-    const inspirationFlag = sheet.actor.getFlag("n5econversion",'attributes') ?? {};
-    const inspiration = html.find(".dnd5e.sheet.actor .counter.flexrow.inspiration label.flexrow").first();
-
-    // Inspiration 2 Checkbox
-    const inspiration2 = document.createElement('input');
-    inspiration2.type = 'checkbox';
-    inspiration2.id = 'inspiration2'; // ID for the checkbox
-    inspiration2.name = 'inspirationFlag.attributes.inspiration2'; // Name attribute
-    // ... setup for inspiration2 checkbox, append if needed
-
-    // Inspiration 3 Checkbox
-    const inspiration3 = document.createElement('input');
-    // ... similar setup for inspiration3 checkbox
 });
 
 /* Inject custom resource consumption option onto item sheet. */
