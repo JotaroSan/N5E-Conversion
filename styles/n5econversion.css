@@ -2,6 +2,33 @@
     min-width: 850px !important;
 }
 
+/* Reposition the Character sheet attributes */
+li.attribute{
+    order:3
+}
+
+li.attribute.health,li.attribute.hit-dice{
+    order: 1;
+}
+li.attribute.chakra,li.attribute.chakradie{
+    order: 2;
+    border: none;
+        border-right-width: medium;
+        border-right-style: none;
+        border-right-color: currentcolor;
+    border-right: 2px groove #eeede0 !important;
+    border-radius: 0;
+    }
+}
+
+/* Hide unnecessary components */
+.dnd5e.sheet.actor ul.attributes li.attribute .attribute-footer{
+height: 0px !important;
+display: none;
+overflow: hidden;
+}
+
+
 /* Hide label and input for system.currency.xx except when xx == gp */
 input[name^="system.currency."]:not([name="system.currency.gp"]),
 label[for^="system.currency."]:not([for="system.currency.gp"]) {

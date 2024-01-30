@@ -53,12 +53,14 @@ libWrapper.register(moduleID, 'dnd5e.documents.Actor5e.prototype._prepareAbiliti
 
     // Assuming _prepareAbilities is called within _prepareData
     // and modifies this.data in some way:
-    if (this.data.type === 'character' || this.data.type === 'npc') { // Adjust according to when you need to apply changes
-      for (const [id, abl] of Object.entries(this.data.data.abilities)) {
-        if (!Number.isNumeric(abl.saveProf.term)) {
-          // Modify the abilities as needed
-          abl.save += Math.floor(abl.saveProf.flat / 2);
-        }
+    if (this.type === 'character' || this.type === 'npc') { // Adjust according to when you need to apply changes
+      if (this.abilities) {
+         for (const [id, abl] of Object.entries(this.abilities)) {
+            if (!Number.isNumeric(abl.saveProf.term)) {
+              // Modify the abilities as needed
+              abl.save += Math.floor(abl.saveProf.flat / 2);
+            }
+         }
       }
     }
 
@@ -91,45 +93,65 @@ Hooks.on("setup", function () {
   );
 });
 
-// Inject resources onto sheet.
+Hooks.on("createActor", async function(actor, options, userId) {
+    // Check if the actor is a character
+    if (actor.type !== "character") return;
+
+    // Setting flags for a new character
+    await actor.setFlag("n5econversion", "resource.chakra", { label: 'Chakra', value: 10, max: 10 });
+    await actor.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice', value: 1, max: 1 });
+    await actor.setFlag("n5econversion", "attributes.inspiration2", false);
+    await actor.setFlag("n5econversion", "attributes.inspiration3", false);
+    // Additional setup or flag settings can be added here
+});
+
+// Hook for actor sheet rendering - for updating the UI
 Hooks.on("renderActorSheet5e", async function(sheet, html) {
-  sheet.document.setFlag("n5econversion", "resource.chakra", { label: 'Chakra',value: 10, max:10, temp: 10, tempmax: 0 });
-  sheet.document.setFlag("n5econversion", "resource.chakraDice", { label: 'Chakra Dice',value: 10, max:10, temp: 10, tempmax: 0  });
-  sheet.document.setFlag("n5econversion", "resource.ninjutsuSave", { label: 'Ninjutsu Save',value: 10,formula: ''});
-  sheet.document.setFlag("n5econversion", "resource.genjutsuSave", { label: 'Genjutsu Save',value: 10,formula: ''});
-  sheet.document.setFlag("n5econversion", "resource.taijutsuSave", { label: 'Taijutsu Save',value: 10,formula: ''});
-  if (sheet.document.type !== "character") return;
-  const box = html[0].querySelector(".dnd5e.sheet.actor .header-details");
-  const div = document.createElement("DIV");
-  const resources = Object.entries(document.flags.n5econversion.resource ?? {}).reduce((acc, [id, data]) => {
-    if (!id) return acc;
-    acc.push({
-      label: (data.label || "").trim(),
-      name: `flags.n5econversion.resource.${id}`,
-      id,
-      temp: data.temp,
-      tempmax: data.tempmax,
-      value: data.value || null,
-      max: data.max || null
-    });
-    return acc;
-  }, []);
-  const template = "modules/n5econversion/templates/resource.hbs";
-  div.innerHTML = await renderTemplate(template, {resources});
+    // Accessing flags
+    const flagData = sheet.actor.getFlag("n5econversion", "resource") ?? {};
 
-   div.querySelectorAll("input[type='text'][data-dtype='Number']").forEach(input => {
-     input.addEventListener("change", sheet._onChangeInputDelta.bind(sheet));
-   });
+    const resources = {
+            const resources = {
+                chakra: flagData["chakra"] ? {
+                    label: flagData["chakra"].label || 'Chakra',
+                    name: `flags.n5econversion.resource.chakra`,
+                    value: flagData["chakra"].value || null,
+                    max: flagData["chakra"].max || null,
+                    temp: flagData["chakra"].temp,
+                    tempmax: flagData["chakra"].tempmax
+                } : null,
+                chakraDice: flagData["chakraDice"] ? {
+                    label: flagData["chakraDice"].label || 'Chakra Dice',
+                    name: `flags.n5econversion.resource.chakraDice`,
+                    value: flagData["chakraDice"].value || null,
+                    max: flagData["chakraDice"].max || null,
+                    temp: flagData["chakraDice"].temp,
+                    tempmax: flagData["chakraDice"].tempmax
+                } : null
+            };
+    };
 
-   const foc = div.querySelector(`[name="${sheet._addarFocus}"]`);
-   box.append(...div.children);
-   if (foc && sheet._addarFocus.includes("addar")) foc.focus();
+    // Inject custom HTML for resources
+    const attributesContainer = html.find(".dnd5e.sheet.actor .header-details ul.attributes").first();
+    const div = document.createElement("DIV");
+    const template = "modules/n5econversion/templates/resource.hbs";
+    div.innerHTML = await renderTemplate(template, {resources});
+    attributesContainer.append(div);
 
-   html[0].querySelectorAll("input").forEach(input => input.addEventListener("focus", (event) => {
-     sheet._addarFocus = event.currentTarget.name;
-     if (event.currentTarget.closest(".attributes")) event.currentTarget.select();
-   }));
+    // Handling Inspiration 2 & 3
+    const inspirationFlag = sheet.actor.getFlag("n5econversion",'attributes') ?? {};
+    const inspiration = html.find(".dnd5e.sheet.actor .counter.flexrow.inspiration label.flexrow").first();
 
+    // Inspiration 2 Checkbox
+    const inspiration2 = document.createElement('input');
+    inspiration2.type = 'checkbox';
+    inspiration2.id = 'inspiration2'; // ID for the checkbox
+    inspiration2.name = 'inspirationFlag.attributes.inspiration2'; // Name attribute
+    // ... setup for inspiration2 checkbox, append if needed
+
+    // Inspiration 3 Checkbox
+    const inspiration3 = document.createElement('input');
+    // ... similar setup for inspiration3 checkbox
 });
 
 /* Inject custom resource consumption option onto item sheet. */
