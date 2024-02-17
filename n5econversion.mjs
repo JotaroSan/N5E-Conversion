@@ -104,21 +104,38 @@ Hooks.on("createActor", async function(actor, options, userId) {
     await actor.setFlag("n5econversion", "attributes.inspiration3", false);
     // Additional setup or flag settings can be added here
 });
-
-/* Hook to incorporate custom character sheet */
-Hooks.once('init', function() {
-    Actors.registerSheet('n5econversion', N5EActorSheet, {
-        types: ['character'],
-        makeDefault: true
-    });
-});
-
-class N5EActorSheet extends ActorSheet {
-    get template() {
-        return 'modules/n5econversion/templates/actor/character-sheet.hbs';
-    }
-}
-
+//
+// Hooks.once('init', async function() {
+//   // Unregister the default character sheet class to prevent conflicts
+//   Actors.unregisterSheet("core", ActorSheet);
+//
+//   // Register your custom sheet for the Legacy character type
+//   Actors.registerSheet("dnd5e", CustomCharacterSheetDND5eLegacy, {
+//     types: ["character"],
+//     label: "DND5E.SheetClassCharacterLegacy"
+//   });
+//
+//   // Assuming the new default character sheet is ActorSheet5eCharacter and your custom is for Legacy
+//   // Register the default sheet as provided by the system for reference
+//   DocumentSheetConfig.registerSheet(Actor, "dnd5e", applications.actor.ActorSheet5eCharacter, {
+//     types: ["character"],
+//     makeDefault: true,
+//     label: "DND5E.SheetClassCharacter"
+//   });
+//
+//   // Register your custom legacy sheet, replacing ActorSheet5eCharacterLegacy with your custom class
+//   DocumentSheetConfig.registerSheet(Actor, "dnd5e", CustomCharacterSheetDND5eLegacy, {
+//     types: ["character"],
+//     makeDefault: false, // Set to false to not override the new default character sheet
+//     label: "Your Custom Legacy Sheet Label"
+//   });
+//
+//   // Preload Handlebars helpers & partials if needed for your custom sheet
+//   utils.preloadHandlebarsTemplates();
+//
+//   // Load additional styles for your custom character sheet
+//   loadStylesheet('modules/n5econversion/styles/custom-legacy-sheet.css');
+// });
 
 // Hook for actor sheet rendering - for updating the UI
 Hooks.on("renderActorSheet5e", async function(sheet, html) {
